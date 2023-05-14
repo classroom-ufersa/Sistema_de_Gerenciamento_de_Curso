@@ -46,7 +46,38 @@ typedef struct curso{
     fclose(arq);
     return alunos;
 	}
- void inserir_matricula (Aluno *novo_aluno, Curso *curso){
+    Curso* imprimirListaAlunos(Curso* c) {
+    FILE* arq = fopen("ListadaMatricua.txt", "r");
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+    } else {
+        Aluno* aluno = NULL;
+        Aluno* ultimo_aluno = NULL;
+        while (1) {
+            aluno = (Aluno*)malloc(sizeof(Aluno));
+            if (aluno == NULL) {
+                printf("Erro ao alocar memoria.\n");
+                break;
+            }
+            int result = fscanf(arq, "INFORMACOES DO MATRICULADO\nNome: %99[^\n]\nMatricula: %d\nNota: %f\n\n", aluno->nome, &aluno->matricula, &aluno->nota);
+            if (result != 3) {
+                free(aluno);
+                break;
+            }
+            aluno->next = NULL;
+            if (c->lista_de_alunos == NULL) {
+                c->lista_de_alunos = aluno;
+                ultimo_aluno = aluno;
+            } else {
+                ultimo_aluno->next = aluno;
+                ultimo_aluno = aluno;
+            }
+        }
+        fclose(arq);
+    }
+   
+}
+   void inserir_matricula (Aluno *novo_aluno, Curso *curso){
             
             if(curso->vagas == 0){
                 printf("\nNao ha mais vagas no curso de %s", curso->nome);              
@@ -63,11 +94,4 @@ typedef struct curso{
                 curso->matriculados++;
                 curso->vagas--;
             }              
-    }
-    
-	int remover(int mat, Curso *c){
-
-    if(c->lista_de_alunos == NULL){
-        printf("\nNao existem pessoas matriculadas no curso\n");
-        return 0;
     }

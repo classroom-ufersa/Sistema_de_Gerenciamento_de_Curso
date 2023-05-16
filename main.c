@@ -145,3 +145,94 @@ int main(void) {
                 }
                 
                 break;
+
+			    case OPCAO4:
+                
+                
+
+                printf("\nInsira uma matricula a ser buscada: ");
+                scanf("%i", &mat);
+                printf("\nEm qual curso desejar realizar a busca?");
+                
+                printf("\n 1 - bti \n 2 - cet\n");
+                
+                scanf("%i", &option);
+                if(option == 1){
+
+                alunos = busca(mat,bti);
+
+                if(alunos != NULL){
+                printf("\nAluno encontrado\n");
+                printf("Nome: %s\n", alunos->nome);
+                printf("Matricula: %d\n", alunos->matricula);
+                printf("Nota: %.2f\n\n", alunos->nota);
+              
+                    } else {
+                        printf("\nAluno não encontrado\n");
+                    }
+                } else if (option == 2){
+
+                alunos = busca(mat,cet);
+
+                if(alunos != NULL){
+                printf("\nAluno encontrado\n");
+                printf("\nNome: %s\n curso: %s\n Matricula %d\n Nota: %.2f\n\n", alunos->nome, alunos->curso, alunos->matricula, alunos->nota);
+                        }
+                    }
+
+                break;
+                
+            case OPCAO5:
+                
+                 
+                printf("\nEm qual curso desejar realizar a edição?");
+                
+                printf("\n 1 - bti \n 2 - cet\n");
+                
+                scanf("%i", &option);
+                
+                if(option == 1){
+                
+                editar(bti);
+                printf("\nMatricula editada com sucesso!\n\n");
+                } else if (option == 2){
+
+                editar(cet);
+                printf("\nMatricula editada com sucesso!\n\n");
+
+                }
+                break;
+                
+            case OPCAO6:
+                
+                printf("\nEm qual curso desejar verificar as vagas disponiveis?");
+                
+                printf("\n 1 - bti \n 2 - cet\n");
+                
+                scanf("%i", &option);
+                if(option == 1){
+                
+                printf("\nQuantidade de vagas disponiveis em %s: %i\n\n",bti->nome, bti->vagas);
+                } else if (option == 2){
+
+                printf("\nQuantidade de vagas disponiveis em %s: %i\n\n",cet->nome, cet->vagas);
+
+                }
+                break;
+                
+            case OPCAO7:
+               
+                printf("\nEm qual curso desejar verificar a quantidade de alunos?");
+                
+                printf("\n 1 - bti \n 2 - cet\n");
+                
+                scanf("%i", &option);
+                if(option == 1){
+                
+                printf("\nQuantidade de alunos em %s: %i\n\n",bti->nome, bti->matriculados);
+                } else if (option == 2){
+
+                printf("\nQuantidade de alunos em %s: %i\n\n",cet->nome, cet->matriculados);
+
+                }
+                break;

@@ -151,3 +151,53 @@ curso* capturarListaAlunos(curso* c) {
       
 } 
 
+Aluno* busca(int mat, curso* c) {
+        Aluno *aluno = (Aluno*)malloc(sizeof(Aluno)); 
+        Aluno *a = (Aluno*)malloc(sizeof(Aluno));
+        a = NULL;
+        aluno = NULL;
+       c = capturarListaAlunos(c);
+
+       for(aluno = c->lista_de_alunos; aluno != NULL; aluno = aluno->next){
+            if(aluno->matricula == mat){
+                a = aluno;
+            }
+       } 
+
+        if(a != NULL){
+            return a;
+        } else {
+            return NULL;
+        }
+    }
+
+    
+int imprime (curso *c){
+    c = capturarListaAlunos(c);
+    Aluno *aux = c->lista_de_alunos;
+if(aux == NULL){
+    printf("\nAs matriculas estão vazias\n\n");
+    return 0;
+}
+    while(aux != NULL){
+        printf("\nNome: %s\nCurso: %s\nMatricula: %d\nNota: %.2f\n\n", aux->nome, aux->curso, aux->matricula, aux->nota);
+        aux = aux->next;
+        if(aux == NULL){
+            break;
+        }
+    }
+    return 1;
+}
+
+int editar(curso *c){
+    int mat;
+
+    printf("\nInsira a matricula a ser editada: ");
+    scanf("%i", &mat);
+
+
+    remover(mat,c);
+    realizar_matricula();
+    return 1;
+    
+}

@@ -236,3 +236,18 @@ int main(void) {
 
                 }
                 break;
+	    case OPCAO8:
+                
+                saida = 1;
+                printf("Obrigado por usar este programa.");
+                break; 
+
+            default:
+                printf("Este programa possui um bug.");
+                return 1;
+        }
+    
+    } while(!saida);
+   
+    return 0;
+}

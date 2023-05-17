@@ -3,12 +3,19 @@
  
 # Funcionalidades
 Realizar Matricula
+
 Excluir Matricula
+
 Listar Matriculados
-Buscar curso
+
+Buscar Curso
+
 Editar Matricula
+
 Consultar vagas disponiveis para um curso
+
 Consultar quantitativo de alunos em um curso
+
 Sair
 
 # Dependências

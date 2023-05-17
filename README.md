@@ -1,6 +1,16 @@
 # Sistema de Gerenciamento de Curso
  Este é um programa de sistema de gerenciamento de curso desenvolvido para auxiliar na administração de cursos e matrículas de alunos. O programa permite a realização de diversas operações, como matrícula de alunos, remoção de matrículas, busca de alunos, atualização do arquivo de matrículas e impressão dos alunos matriculados.
  
+# Funcionalidades
+Realizar Matricula
+Excluir Matricula
+Listar Matriculados
+Buscar curso
+Editar Matricula
+Consultar vagas disponiveis para um curso
+Consultar quantitativo de alunos em um curso
+Sair
+
 # Dependências
 O programa depende das seguintes bibliotecas padrão do C:
 

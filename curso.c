@@ -101,8 +101,7 @@ curso* capturarListaAlunos(curso* c) {
         }
         fclose(arq);
     }
-    //Inserir algoritmo de ordenção aqui 
-
+     
     return c;
    
 }

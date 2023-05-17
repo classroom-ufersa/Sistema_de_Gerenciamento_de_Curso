@@ -1,6 +1,9 @@
 # Sistema de Gerenciamento de Curso
  Este é um programa de sistema de gerenciamento de curso desenvolvido para auxiliar na administração de cursos e matrículas de alunos. O programa permite a realização de diversas operações, como matrícula de alunos, remoção de matrículas, busca de alunos, atualização do arquivo de matrículas e impressão dos alunos matriculados.
  
+# Problemática
+A problemática abordada pelo programa de sistema de gerenciamento de curso é a necessidade de automatizar e simplificar as tarefas relacionadas à administração dos alunos matriculados em um curso. Tradicionalmente, essa tarefa é realizada manualmente, o que pode ser demorado, propenso a erros e dificulta o acesso rápido às informações.
+ 
 # Funcionalidades
 Realizar Matricula
 

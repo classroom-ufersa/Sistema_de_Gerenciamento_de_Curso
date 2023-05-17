@@ -35,3 +35,6 @@ Compile o programa utilizando um compilador C compatível.
 Execute o programa.
 Escolha a operação desejada a partir do menu exibido.
 Siga as instruções fornecidas pelo programa para realizar a operação escolhida.
+
+# Tecnologias Utilizadas
+Programado em linguagem C.
